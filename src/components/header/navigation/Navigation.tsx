@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
-import styles from "./navigation.module.scss";
-
 import { navigation } from "../../../mockData/mockData";
 import { MiniBarChart } from "../../minicharts/MiniCharts";
-import { useNavigation } from "../../../bll/useNavigation";
+import { useNavigation } from "../../../hooks/useNavigation";
+
+import styles from "./navigation.module.scss";
 
 const Navigation = () => {
   const { formattedPageName, getNavLinkClass, pathSegments } = useNavigation();
@@ -62,11 +62,11 @@ const Navigation = () => {
           <nav className={styles["navbar"]}>
             <div className={styles["navbar-collapse"]}>
               <ul className={styles["navbar-nav"]}>
-                {navigation.map((item, index) => {
+                {navigation.map((item) => {
                   const Icon = item.img;
 
                   return (
-                    <li key={index}>
+                    <li key={item.id}>
                       <NavLink to={item.link} className={getNavLinkClass}>
                         {Icon && <Icon />}
                         <p>{item.title}</p>

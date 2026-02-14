@@ -7,6 +7,13 @@ import type {
   IOrdersData,
   IUser,
 } from "../types/types";
+import {
+  FiUser,
+  FiCreditCard,
+  FiSettings,
+  FiLock,
+  FiLogOut,
+} from "react-icons/fi";
 import { BsSpeedometer2 } from "react-icons/bs";
 import { TfiEmail } from "react-icons/tfi";
 import { CiMedicalCase } from "react-icons/ci";
@@ -25,37 +32,44 @@ export const user: IUser[] = [
 
 export const navigation: INavigation[] = [
   {
+    id: 1,
     title: "Dashboard",
     link: "/dashboard",
     img: BsSpeedometer2,
   },
   {
+    id: 2,
     title: "Email",
     link: "/email",
     img: TfiEmail,
   },
   {
+    id: 3,
     title: "UI Elemet",
     link: "/ui-element",
     img: CiMedicalCase,
   },
   {
+    id: 4,
     title: "Forms",
     link: "/forms",
     img: FaWpforms,
   },
 
   {
+    id: 5,
     title: "More",
     link: "/more",
     img: CgDetailsMore,
   },
   {
+    id: 6,
     title: "Charts",
     link: "/charts",
     img: RiPieChart2Fill,
   },
   {
+    id: 7,
     title: "Pages",
     link: "/pages",
     img: CiMedicalCase,
@@ -91,30 +105,35 @@ export const miniChartData: IMiniChartData[] = [
 
 export const cardData: IcardData[] = [
   {
+    id: 1,
     title: "Orders",
     count: "1,587",
     badge: "+11%",
     badgeText: "From previous period",
   },
   {
+    id: 2,
     title: "Revenue",
     count: "$46,782",
     badge: "-29%",
     badgeText: "From previous period",
   },
   {
+    id: 3,
     title: "Average Price",
     count: "$15.9",
     badge: "0%",
     badgeText: "From previous period",
   },
   {
+    id: 3,
     title: "Product Sold",
     count: "1890",
     badge: "+89%",
     badgeText: "From previous period",
   },
   {
+    id: 4,
     title: "Product Sold",
     count: "1890",
     badge: "+89%",
@@ -124,7 +143,7 @@ export const cardData: IcardData[] = [
 
 export const ordersData: IOrdersData[] = [
   {
-    id: "13242",
+    id: 13242,
     img: avatar,
     status: "Cancel",
     name: "Riverston Glass Chair",
@@ -132,7 +151,7 @@ export const ordersData: IOrdersData[] = [
     date: "5/12/2016",
   },
   {
-    id: "13242",
+    id: 13242,
     img: avatar,
     status: "Delivered",
     name: "Riverston Glass Chair",
@@ -140,7 +159,7 @@ export const ordersData: IOrdersData[] = [
     date: "5/12/2016",
   },
   {
-    id: "13242",
+    id: 13242,
     img: avatar,
     status: "Cancel",
     name: "Riverston Glass Chair",
@@ -148,7 +167,7 @@ export const ordersData: IOrdersData[] = [
     date: "5/12/2016",
   },
   {
-    id: "13242",
+    id: 13242,
     img: avatar,
     status: "Delivered",
     name: "Riverston Glass Chair",
@@ -156,7 +175,7 @@ export const ordersData: IOrdersData[] = [
     date: "5/12/2016",
   },
   {
-    id: "13242",
+    id: 13242,
     img: avatar,
     name: "Riverston Glass Chair",
     status: "Shipped",
@@ -164,7 +183,7 @@ export const ordersData: IOrdersData[] = [
     date: "5/12/2016",
   },
   {
-    id: "13242",
+    id: 13242,
     img: avatar,
     name: "Riverston Glass Chair",
     status: "Delivered",
@@ -172,11 +191,49 @@ export const ordersData: IOrdersData[] = [
     date: "5/12/2016",
   },
   {
-    id: "13242",
+    id: 13242,
     img: avatar,
     name: "Riverston Glass Chair",
     status: "Shipped",
     coast: "$435",
     date: "5/12/2016",
+  },
+];
+
+export const dropDownLinks = [
+  {
+    id: 1,
+    icon: FiUser,
+    name: "Profile",
+    action: "",
+    path: "/dashboard",
+  },
+  {
+    id: 2,
+    icon: FiCreditCard,
+    name: "My wallet",
+    action: "",
+    path: "/dashboard",
+  },
+  {
+    id: 3,
+    icon: FiSettings,
+    name: "Settings",
+    action: "",
+    path: "/dashboard",
+  },
+  {
+    id: 4,
+    icon: FiLock,
+    name: "Lock screen",
+    action: "",
+    path: "/dashboard",
+  },
+  {
+    id: 5,
+    icon: FiLogOut,
+    name: "Log out",
+    action: "logout",
+    path: "/dashboard",
   },
 ];

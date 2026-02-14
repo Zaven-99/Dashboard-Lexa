@@ -1,14 +1,15 @@
 import type { IFormValues } from "../../../types/types";
-import { FaHeart, FaLock, FaGoogle } from "react-icons/fa";
-import { useForm } from "react-hook-form";
-import type { SubmitHandler } from "react-hook-form";
+import { FaLock, FaGoogle } from "react-icons/fa";
 
-import Input from "../../UI/input/Input";
-import Button from "../../UI/button/Button";
+import Input from "../../input/Input";
+import Button from "../../button/Button";
+import AuthLogo from "../authLogo/AuthLogo";
 
 import styles from "./signIn.module.scss";
 
-import logoLightTheme from "../../../assets/logo/logoLightTheme.png";
+import { useSignin } from "../../../hooks/useSignin";
+import AuthFooter from "../authFooter/AuthFooter";
+import Form from "../form/Form";
 
 interface SignInProps {
   toggleSwitch: (formType: string) => void;
@@ -17,39 +18,18 @@ interface SignInProps {
 }
 
 const SignIn = ({ toggleSwitch, handleLogin, error }: SignInProps) => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<IFormValues>({
-    defaultValues: {
-      email: "",
-      password: "",
-    },
-    mode: "onBlur",
-    reValidateMode: "onChange",
-  });
-
-  const onSubmit: SubmitHandler<IFormValues> = (data) => {
-    handleLogin(data, reset);
-  };
-
+  const { register, handleSubmit, errors, onSubmit } = useSignin(handleLogin);
   return (
     <div className={styles.signin}>
       <div className={styles["signin-container"]}>
         <div className={styles["signin-container__inner"]}>
-          <h3 className={styles.logo}>
-            <a href="">
-              <img src={logoLightTheme} alt="logo" />
-            </a>
-          </h3>
+          <AuthLogo />
           <h4 className={styles["auth-title"]}>Welcome Back !</h4>
           <p className={styles["auth-subtitle"]}>
             Sign in to continue to Lexa.
           </p>
 
-          <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+          <Form onSubmit={handleSubmit(onSubmit)}>
             {error && <p className={styles.error}>{error}</p>}
             <label className={styles["form-label"]} htmlFor="username">
               Email
@@ -102,7 +82,7 @@ const SignIn = ({ toggleSwitch, handleLogin, error }: SignInProps) => {
                 label="Log in"
               />
             </div>
-          </form>
+          </Form>
 
           <div className={styles["forgot-password"]}>
             <FaLock size={10} color="#adb5bdbf" />
@@ -117,21 +97,12 @@ const SignIn = ({ toggleSwitch, handleLogin, error }: SignInProps) => {
         </div>
       </div>
 
-      <div className={styles["auth-footer"]}>
-        <p className={styles["auth-footer__text"]}>
-          Don't have an account ?{" "}
-          <span
-            className={styles["auth-footer__link"]}
-            onClick={() => toggleSwitch("signup")}
-          >
-            Signup Now
-          </span>
-        </p>
-        <p className={styles["auth-footer__copyright"]}>
-          © 2026 Lexa - Crafted with <FaHeart size={10} color="red" /> by
-          Themesbrand.
-        </p>
-      </div>
+      <AuthFooter
+        text="Don't have an account ?"
+        link="Signup Now"
+        toggleSwitch={toggleSwitch}
+        arg="signup"
+      />
     </div>
   );
 };

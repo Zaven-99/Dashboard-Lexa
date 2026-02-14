@@ -1,4 +1,4 @@
-import { usePageTitle } from "../bll/usePageTitle";
+import { usePageTitle } from "../hooks/usePageTitle";
 import Auth from "../components/auth/Auth";
 
 const AuthPage = () => {

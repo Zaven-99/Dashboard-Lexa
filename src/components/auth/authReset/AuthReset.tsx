@@ -1,40 +1,26 @@
-import { useForm } from "react-hook-form";
-import { FaHeart } from "react-icons/fa";
-import type { IFormValues } from "../../../types/types";
-
-import Input from "../../UI/input/Input";
-import Button from "../../UI/button/Button";
+import Input from "../../input/Input";
+import Button from "../../button/Button";
+import AuthLogo from "../authLogo/AuthLogo";
 
 import styles from "./AuthReset.module.scss";
 
-import logoLightTheme from "../../../assets/logo/logoLightTheme.png";
+import { useAuthReset } from "../../../hooks/useAuthReset";
+import AuthFooter from "../authFooter/AuthFooter";
+import Form from "../form/Form";
 
 interface AuthResetProps {
   toggleSwitch: (formType: string) => void;
 }
 
 const AuthReset = ({ toggleSwitch }: AuthResetProps) => {
-  const {
-    register,
-    formState: { errors },
-  } = useForm<IFormValues>({
-    defaultValues: {
-      email: "",
-    },
-    mode: "onBlur",
-    reValidateMode: "onChange",
-  });
+  const { register, errors } = useAuthReset();
   return (
     <div className={styles["authReset"]}>
       <div className={styles["authReset-container"]}>
         <div className={styles["authReset-container__inner"]}>
-          <h3 className={styles.logo}>
-            <a href="">
-              <img src={logoLightTheme} alt="logo" />
-            </a>
-          </h3>
+          <AuthLogo />
           <h4 className={styles["auth-title"]}>Reset password</h4>
-          <form action="">
+          <Form>
             <label className={styles["form-label"]} htmlFor="email">
               Email
             </label>
@@ -60,24 +46,16 @@ const AuthReset = ({ toggleSwitch }: AuthResetProps) => {
                 label="Reset"
               />
             </div>
-          </form>
+          </Form>
         </div>
       </div>
-      <div className={styles["auth-footer"]}>
-        <p className={styles["auth-footer__text"]}>
-          Remember it ?{" "}
-          <span
-            className={styles["auth-footer__link"]}
-            onClick={() => toggleSwitch("signin")}
-          >
-            Sign in here
-          </span>
-        </p>
-        <p className={styles["auth-footer__copyright"]}>
-          © Lexa - Crafted with <FaHeart size={10} color="red" /> by
-          Themesbrand.
-        </p>
-      </div>
+
+      <AuthFooter
+        text="Remember it ?"
+        link="Sign in here"
+        toggleSwitch={toggleSwitch}
+        arg="signin"
+      />
     </div>
   );
 };

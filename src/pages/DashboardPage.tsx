@@ -1,9 +1,9 @@
-import { usePageTitle } from "../bll/usePageTitle";
-import { useSideBar } from "../bll/useSideBar";
-import { useTheme } from "../bll/useTheme";
+import { usePageTitle } from "../hooks/usePageTitle";
+import { useSideBar } from "../hooks/useSideBar";
+import { useTheme } from "../hooks/useTheme";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
-import MainPge from "../components/main/Main";
+import Main from "../components/main/Main";
 import Sidebar from "../components/sidebar/Sidebar";
 
 const DashboardPage = () => {
@@ -26,7 +26,7 @@ const DashboardPage = () => {
           />
         </>
       )}
-      <MainPge />
+      <Main />
       <Footer />
     </div>
   );

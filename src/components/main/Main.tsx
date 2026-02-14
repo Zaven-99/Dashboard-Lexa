@@ -5,11 +5,11 @@ import StatCard from "../statCard/StatCard";
 import styles from "./main.module.scss";
 const Main = () => {
   return (
-    <div className={styles["main"]}>
+    <main className={styles["main"]}>
       <StatCard />
       <ChartsSection />
       <OrderSection />
-    </div>
+    </main>
   );
 };
 

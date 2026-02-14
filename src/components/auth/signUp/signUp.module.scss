@@ -68,29 +68,28 @@
           box-shadow 0.2s ease;
 
         &:focus {
-          border-color: #7a6fbe; // цвет подсветки
+          border-color: #7a6fbe;
           box-shadow: 0 0 0 2px rgba(122, 111, 190, 0.25);
         }
         &::placeholder {
           color: var(--bs-body-color);
         }
       }
-      .form {
-        padding: 1rem;
-        .btn-wrapper {
-          display: flex;
-          justify-content: end;
-          .submit-button {
-            min-width: 110px;
-            cursor: pointer;
-            background: var(--bs-primary);
-            color: white;
-            font-size: 13px;
-            padding: 5px 15px;
-            border-radius: 3px;
-          }
+
+      .btn-wrapper {
+        display: flex;
+        justify-content: end;
+        .submit-button {
+          min-width: 110px;
+          cursor: pointer;
+          background: var(--bs-primary);
+          color: white;
+          font-size: 13px;
+          padding: 5px 15px;
+          border-radius: 3px;
         }
       }
+
       .termsAgreement {
         position: relative;
         margin-top: 1.5rem;

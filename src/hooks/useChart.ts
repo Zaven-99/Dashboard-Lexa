@@ -11,7 +11,7 @@ export const useChart = () => {
     0,
   );
 
-  const lastMonthValue = chartData[chartData.length - 1].marketplace; // или direct
+  const lastMonthValue = chartData[chartData.length - 1].marketplace;
 
   const mode = localStorage.getItem("mode");
 

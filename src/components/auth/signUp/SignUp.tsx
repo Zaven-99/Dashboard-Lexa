@@ -1,10 +1,9 @@
-import type { IFormValues } from "../../../types/types";
-import { FaHeart } from "react-icons/fa";
-import { useForm } from "react-hook-form";
-
-import Input from "../../UI/input/Input";
-import logoLightTheme from "../../../assets/logo/logoLightTheme.png";
-import Button from "../../UI/button/Button";
+import { useSignUp } from "../../../hooks/useSignUp";
+import Input from "../../input/Input";
+import Button from "../../button/Button";
+import AuthLogo from "../authLogo/AuthLogo";
+import Form from "../form/Form";
+import AuthFooter from "../authFooter/AuthFooter";
 
 import styles from "./signUp.module.scss";
 
@@ -13,33 +12,18 @@ interface SignUpProps {
 }
 
 const SignUp = ({ toggleSwitch }: SignUpProps) => {
-  const {
-    register,
-    formState: { errors },
-  } = useForm<IFormValues>({
-    defaultValues: {
-      email: "",
-      username: "",
-      password: "",
-    },
-    mode: "onBlur",
-    reValidateMode: "onChange",
-  });
+  const { register, errors } = useSignUp();
   return (
     <div className={styles["signUp"]}>
       <div className={styles["signUp-container"]}>
         <div className={styles["signUp-container_inner"]}>
-          <h3 className={styles.logo}>
-            <a href="">
-              <img src={logoLightTheme} alt="logo" />
-            </a>
-          </h3>
+          <AuthLogo />
           <h4 className={styles["auth-title"]}>Free Register</h4>
           <p className={styles["auth-subtitle"]}>
             Get your free Lexa account now.
           </p>
 
-          <form className={styles.form}>
+          <Form>
             <label className={styles["form-label"]} htmlFor="username">
               Email
             </label>
@@ -103,24 +87,16 @@ const SignUp = ({ toggleSwitch }: SignUpProps) => {
                 By registering you agree to the Lexa <span>Terms of Use</span>
               </p>
             </div>
-          </form>
+          </Form>
         </div>
       </div>
-      <div className={styles["auth-footer"]}>
-        <p className={styles["auth-footer__text"]}>
-          Already have an account ?{" "}
-          <span
-            className={styles["auth-footer__link"]}
-            onClick={() => toggleSwitch("signin")}
-          >
-            Login
-          </span>
-        </p>
-        <p className={styles["auth-footer__copyright"]}>
-          © Lexa - Crafted with <FaHeart size={10} color="red" /> by
-          Themesbrand.
-        </p>
-      </div>
+
+      <AuthFooter
+        text="Already have an account ?"
+        link="Login"
+        toggleSwitch={toggleSwitch}
+        arg="signin"
+      />
     </div>
   );
 };

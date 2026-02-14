@@ -10,9 +10,9 @@ const LatestOrders = () => {
         <div className={styles.table}>
           <table>
             <tbody>
-              {ordersData.map((item, index) => {
+              {ordersData.map((item) => {
                 return (
-                  <tr key={index}>
+                  <tr key={item.id}>
                     <td className={styles["table-item"]}>#{item.id}</td>
                     <td className={styles["table-item"]}>
                       <img src={item.img} alt="" />

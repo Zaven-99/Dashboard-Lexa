@@ -1,6 +1,6 @@
-import { useHeader } from "../../bll/useHeader";
+import { useHeader } from "../../hooks/useHeader";
 
-import BurgerMenu from "../UI/burgerMenu/BurgerMenu";
+import BurgerMenu from "../burgerMenu/BurgerMenu";
 import NavbarHeader from "./navbarHeader/NavbarHeader";
 import Navigation from "./navigation/Navigation";
 

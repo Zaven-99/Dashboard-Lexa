@@ -1,4 +1,4 @@
-import { navigation } from "../../../mockData/mockData";
+import { navigation } from "../../mockData/mockData";
 import { NavLink } from "react-router-dom";
 
 import styles from "./burgerMenu.module.scss";
@@ -17,11 +17,11 @@ const BurgerMenu = ({ isClosing }: BurgerMenuProps) => {
       className={`${styles["burger-menu"]} ${isClosing ? styles.closing : ""}`}
     >
       <ul className={styles["links"]}>
-        {navigation.map((item, index) => {
+        {navigation.map((item) => {
           const Icon = item.img;
 
           return (
-            <li key={index}>
+            <li key={item.id}>
               <NavLink to={item.link} className={getNavLinkClass}>
                 {Icon && <Icon />}
                 <p>{item.title}</p>

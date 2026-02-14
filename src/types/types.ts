@@ -14,6 +14,7 @@ export interface IFormValues {
 }
 
 export interface INavigation {
+  id: number;
   title: string;
   link: string;
   img?: IconType;
@@ -30,6 +31,7 @@ export interface IMiniChartData {
 }
 
 export interface IcardData {
+  id: number;
   title: string;
   count: string;
   badge: string;
@@ -37,10 +39,18 @@ export interface IcardData {
 }
 
 export interface IOrdersData {
-  id: string;
+  id: number;
   img: string;
   name: string;
   status: string;
   coast: string;
   date: string;
+}
+
+export interface IDropDownLinks {
+  id: number;
+  icon: IconType;
+  name: string;
+  action: string;
+  path: string;
 }

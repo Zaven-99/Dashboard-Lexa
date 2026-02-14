@@ -1,6 +1,4 @@
-/* ===============================
-   Light theme
-================================= */
+//light
 :root {
   --bs-header-bg: #ffffff;
   --bs-sidebar-bg: #f1f5f7;
@@ -68,9 +66,7 @@
   --bs-burger-color: #1f2431;
 }
 
-/* ===============================
-   Dark theme
-================================= */
+//dark
 [data-theme="dark"] {
   --bs-header-bg: #7a6fbe;
   --bs-sidebar-bg: #2a3142;

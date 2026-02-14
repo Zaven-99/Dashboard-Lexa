@@ -117,13 +117,13 @@
       transition:
         border-color 0.15s ease-in-out,
         box-shadow 0.15s ease-in-out;
-      outline: none; // убираем стандартную синюю рамку браузера
+      outline: none;
       transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
 
       &:focus {
-        border-color: #7a6fbe; // цвет подсветки
+        border-color: #7a6fbe; 
         box-shadow: 0 0 0 2px rgba(122, 111, 190, 0.25);
       }
     }

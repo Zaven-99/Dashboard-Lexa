@@ -1,4 +1,4 @@
-import { useAuth } from "../../bll/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 
 import AuthReset from "./authReset/AuthReset";
 import SignIn from "./signIn/SignIn";

@@ -1,4 +1,4 @@
-import { useChart } from "../../bll/useChart";
+import { useChart } from "../../hooks/useChart";
 
 import styles from "./chart.module.scss";
 
@@ -11,28 +11,18 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import ChartInfo from "./chartInfo/ChartInfo";
 
 export default function CenterChart() {
   const { totalMarketplace, totalIncome, lastMonthValue, mode, chartData } =
     useChart();
   return (
     <div className={styles.chart}>
-      <h4 className={styles["email-sent"]}>Email Sent</h4>
-      <div className={styles["text-center"]}>
-        <div className={styles.col}>
-          <h5 className={styles.number}>${totalMarketplace}</h5>
-          <p className={styles.text}>Marketplace</p>
-        </div>
-        <div className={styles.col}>
-          <h5 className={styles.number}>${totalIncome}</h5>
-          <p className={styles.text}>Total Income</p>
-        </div>
-        <div className={styles.col}>
-          <h5 className={styles.number}>${lastMonthValue}</h5>
-          <p className={styles.text}>Last Month</p>
-        </div>
-      </div>
-
+      <ChartInfo
+        totalMarketplace={totalMarketplace}
+        totalIncome={totalIncome}
+        lastMonthValue={lastMonthValue}
+      />
       <div className={styles["chart-body"]}>
         <ResponsiveContainer key={mode}>
           <AreaChart

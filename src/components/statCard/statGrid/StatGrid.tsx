@@ -7,9 +7,9 @@ import styles from "./statGrid.module.scss";
 const StatsGrid = () => {
   return (
     <div className={styles["mini-stat"]}>
-      {cardData.map((item, index) => (
+      {cardData.map((item) => (
         <StatCardItem
-          key={index}
+          key={item.id}
           title={item.title}
           count={item.count}
           badge={item.badge}

@@ -1,8 +1,8 @@
 import { FaCog } from "react-icons/fa";
-import { useDrpoDown } from "../../../bll/useDrpoDown";
+import { useDrpoDown } from "../../../hooks/useDrpoDown";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-import DropDownMenu from "../../UI/dropDownMenu/DropDownMenu";
+import DropDownMenu from "../../dropDownMenu/DropDownMenu";
 
 import styles from "./navbarHeader.module.scss";
 
