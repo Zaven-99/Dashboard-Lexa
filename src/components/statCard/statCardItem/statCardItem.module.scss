@@ -1,0 +1,78 @@
+.card-body {
+  background: rgba(122, 111, 190);
+  background-image: url("../../assets/cards/cards-bg.png");
+  background-size: cover;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow:
+    0 -3px 31px 0 #0000000d,
+    0 6px 20px 0 #00000005;
+  .text {
+    .card-title {
+      font-size: 16px;
+      margin-bottom: 1rem;
+      color: #ffff;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .orders-count {
+      margin-bottom: 1rem;
+      color: #ffff;
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 1.625rem;
+    }
+    .badge {
+      --bs-badge-padding-x: 0.4em;
+      --bs-badge-padding-y: 0.25em;
+      --bs-badge-font-size: 0.75em;
+      --bs-badge-font-weight: 700;
+      --bs-badge-color: #fff;
+      --bs-badge-border-radius: var(--bs-border-radius);
+      border-radius: var(--bs-badge-border-radius);
+      color: var(--bs-badge-color);
+      display: inline-block;
+      font-size: var(--bs-badge-font-size);
+      font-weight: var(--bs-badge-font-weight);
+      line-height: 1;
+      padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+      text-align: center;
+      vertical-align: initial;
+      white-space: nowrap;
+    }
+    .blue {
+      background-color: rgba(13, 202, 240);
+    }
+
+    .yellow {
+      background-color: rgba(245, 178, 37);
+    }
+
+    .red {
+      background-color: rgba(236, 83, 108);
+    }
+    .badge-text {
+      font-size: 12px;
+      color: #ffff;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-left: 0.5rem;
+    }
+  }
+  .card-icon {
+    background: #ffffff1a;
+    border-radius: 50%;
+    color: #fff !important;
+    display: inline-block;
+    font-size: 30px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

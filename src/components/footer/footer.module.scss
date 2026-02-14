@@ -1,0 +1,25 @@
+.footer {
+  background-color: var(--bs-footer-bg);
+  padding: 20px 0.75rem;
+  height: 60px;
+  box-shadow: 0 -1px 2px 0 #0000000d;
+  .container {
+    max-width: 90%;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    width: 100%;
+    .row {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      .col {
+        font-size: 14px;
+        color: var(--bs-heading-color);
+      }
+    }
+  }
+}

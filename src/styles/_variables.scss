@@ -1,0 +1,99 @@
+/* ===============================
+   Light theme
+================================= */
+:root {
+  --bs-header-bg: #ffffff;
+  --bs-sidebar-bg: #f1f5f7;
+  --bs-secondary-bg: #ffffff;
+  --bs-heading-color: #111;
+  --bs-header-item-color: #3a445b;
+  --bs-topbar-search-bg: #e5e7eb;
+  --bs-navbar-header-bg: #f1f5f7;
+  --bs-dropdown-topbar: #ffffff1a;
+  --bs-topnav-bg: #f1f5f7;
+  --bs-footer-bg: #f1f5f7;
+  --bs-footer-color: #3a445b;
+  --bs-boxed-body-bg: #ffffff;
+
+  --bs-sidebar-menu-item-color: #3a445b;
+  --bs-sidebar-menu-sub-item-color: #3a445b;
+  --bs-sidebar-menu-item-icon-color: #3a445b;
+  --bs-sidebar-menu-item-hover-color: #7a6fbe;
+  --bs-sidebar-menu-item-active-color: #7a6fbe;
+  --bs-sidebar-menu-item-active-bg: #e5e7eb;
+  --bs-border-width: 1px;
+  --bs-body-color: #000000;
+  --bs-body-bg: #f5f5f5;
+  --bs-secondary-color: #1f2431bf;
+  --bs-border-color: #dee2e6;
+  --bs-border-radius: 0.25rem;
+  --bs-primary: #7a6fbe;
+  --bs-primary-rgb: 122, 111, 190;
+  --bs-form-invalid-color: #f498a7;
+  --bs-form-invalid-border-color: #f498a7;
+  --bs-form-valid-color: #9be9b5;
+  --bs-form-valid-border-color: #9be9b5;
+  --bs-dropdown-zindex: 1000;
+  --bs-dropdown-min-width: 10rem;
+  --bs-dropdown-padding-x: 0;
+  --bs-dropdown-padding-y: 0.5rem;
+  --bs-dropdown-spacer: 0.125rem;
+  --bs-dropdown-font-size: 0.8125rem;
+  --bs-dropdown-color: var(--bs-body-color);
+  --bs-dropdown-bg: var(--bs-secondary-bg);
+  --bs-dropdown-border-color: var(--bs---bs-border-color);
+  --bs-dropdown-border-radius: var(--bs-border-radius);
+  --bs-dropdown-border-width: 0;
+  --bs-dropdown-inner-border-radius: calc(var(--bs-border-radius));
+  --bs-dropdown-divider-bg: var(--bs---bs-border-color);
+  --bs-dropdown-divider-margin-y: 0.5rem;
+  --bs-dropdown-box-shadow: 0 -3px 31px 0 #0000000d, 0 6px 20px 0 #00000005;
+  --bs-dropdown-link-color: var(--bs-body-color);
+  --bs-dropdown-link-hover-color: var(--bs-body-color);
+  --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
+  --bs-dropdown-link-active-color: var(--bs-body-color);
+  --bs-dropdown-link-active-bg: var(--bs-tertiary-bg);
+  --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
+  --bs-dropdown-item-padding-x: 1rem;
+  --bs-dropdown-item-padding-y: 0.25rem;
+  --bs-dropdown-header-color: #6c757d;
+  --bs-dropdown-header-padding-x: 1rem;
+  --bs-dropdown-header-padding-y: 0.5rem;
+  --bs-danger: #ef6767;
+  --bs-danger-rgb: 239, 103, 103;
+  --bs-setting-icon: #555b6d;
+  --bs-header-dark-bg: #2a3142;
+  --bs-chart-bg: #ffff;
+  --bs-table-border-color: #dee2e6;
+  --bs-burger-color: #1f2431;
+}
+
+/* ===============================
+   Dark theme
+================================= */
+[data-theme="dark"] {
+  --bs-header-bg: #7a6fbe;
+  --bs-sidebar-bg: #2a3142;
+  --bs-secondary-bg: #2a3142;
+  --bs-heading-color: #fff;
+  --bs-secondary-color: #adb5bdbf;
+  --bs-header-item-color: #ffffffb3;
+  --bs-topbar-search-bg: #ffffff1a;
+  --bs-navbar-header-bg: #2e3648;
+  --bs-dropdown-topbar: #ffffff1a;
+  --bs-topnav-bg: #323a4e;
+  --bs-footer-bg: #323a4e;
+  --bs-footer-color: #dee2e6;
+  --bs-body-bg: #1f2431;
+  --bs-sidebar-menu-item-color: #79829c;
+  --bs-sidebar-menu-sub-item-color: #79829c;
+  --bs-sidebar-menu-item-icon-color: #79829c;
+  --bs-sidebar-menu-item-hover-color: #7a6fbe;
+  --bs-sidebar-menu-item-active-color: #7a6fbe;
+  --bs-sidebar-menu-item-active-bg: #f5f5f5;
+  --bs-border-width: 1px;
+  --bs-body-color: #adb5bd;
+  --bs-setting-icon: #ffffff;
+  --bs-chart-bg: #323a4e;
+  --bs-burger-color: #ced4da;
+}

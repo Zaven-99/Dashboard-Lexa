@@ -1,0 +1,147 @@
+.header-container {
+  padding: 0 0.75rem;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  max-width: 90%;
+}
+.float-start {
+  @media (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 73px;
+    height: 19px;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+  .logo-mobile {
+    display: none;
+    @media (max-width: 1024px) {
+      display: block;
+      height: 22px;
+      padding: 0 1.5rem;
+    }
+  }
+  .burger {
+    display: none;
+    @media (max-width: 1024px) {
+      display: flex;
+      align-items: center;
+      color: var(--bs-burger-color);
+    }
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.float-end {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  .user {
+    position: relative;
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .dropDown-menu {
+      position: absolute;
+      inset: -44px auto auto -10px;
+      transform: translate3d(0px, 70px, 0px);
+      animation-duration: 0.3s;
+      animation-fill-mode: both;
+      animation-name: DropDownSlide;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      margin: 0;
+      z-index: 1000;
+      background: var(--bs-secondary-bg);
+      width: max-content;
+      border-radius: 3px;
+      @keyframes DropDownSlide {
+        from {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(70%);
+          opacity: 1;
+        }
+      }
+      &.closing {
+        animation: slideOut 0.3s ease forwards;
+      }
+
+      @keyframes slideOut {
+        from {
+          transform: translateY(70%);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+      }
+      @media (max-width: 1024px) {
+        inset: -44px auto auto -70px;
+      }
+    }
+  }
+  .app-search {
+    padding: 16px 0;
+
+    .form-control {
+      background-color: #ffffff1a;
+      border: none;
+      border-radius: 30px;
+      box-shadow: none;
+      height: 38px;
+      padding-left: 20px;
+      padding-right: 40px;
+      color: var(--bs-header-item-color);
+      font-size: 12px;
+      transition:
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+      outline: none; // убираем стандартную синюю рамку браузера
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+      &:focus {
+        border-color: #7a6fbe; // цвет подсветки
+        box-shadow: 0 0 0 2px rgba(122, 111, 190, 0.25);
+      }
+    }
+    .form-control::placeholder {
+      color: var(--bs-header-item-color);
+    }
+  }
+  .settings-icon {
+    color: var(--bs-setting-icon);
+    animation: mdi-spin 2s linear infinite;
+    cursor: pointer;
+    @keyframes mdi-spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.main {
+  background: var(--bs-body-bg);
+  margin-top: 70px;
+  padding: calc(180px + 1.5rem) 0.75rem 60px;
+  @media (max-width: 1024px) {
+    padding: calc(100px + 1.5rem) 0.75rem 60px;
+  }
+}

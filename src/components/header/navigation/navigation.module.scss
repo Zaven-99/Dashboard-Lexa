@@ -1,0 +1,117 @@
+.navigation {
+  background: var(--bs-header-dark-bg);
+
+  .page-title__content {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 90%;
+    .content-container {
+      .row {
+        display: flex;
+        align-items: center;
+
+        .page-name {
+          color: #fff;
+          margin-bottom: 0.5rem;
+        }
+        .breadcrumb {
+          a {
+            color: #ced4da;
+            font-size: 12px;
+          }
+          display: flex;
+          align-items: center;
+          color: #adb5bd;
+          font-size: 12px;
+
+          li {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .mini-charts {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 90%;
+    .topnav {
+      background: var(--bs-topnav-bg);
+      margin-bottom: -40px;
+      width: 100%;
+      box-shadow:
+        0 -3px 31px 0 #0000000d,
+        0 6px 20px 0 #00000005;
+      border-radius: 3px;
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @media (max-width: 1024px) {
+          display: none;
+        }
+
+        li {
+          margin: 0;
+          padding: 0;
+        }
+
+        .nav-item {
+          color: var(--bs-sidebar-menu-item-color);
+          text-align: center;
+          cursor: pointer;
+          padding: 1.2rem 1.5rem;
+          text-decoration: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: all 0.3s ease;
+
+          p {
+            font-size: 13px;
+            margin: 5px 0 0 0;
+          }
+
+          svg {
+            font-size: 20px;
+          }
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            color: var(--bs-sidebar-menu-item-active-color);
+          }
+        }
+      }
+      .active {
+        color: var(--bs-sidebar-menu-item-active-color);
+        text-align: center;
+        cursor: pointer;
+        padding: 1.2rem 1.5rem;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}

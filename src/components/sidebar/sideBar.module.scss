@@ -1,0 +1,121 @@
+@use "../../styles/variables";
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background: var(--bs-sidebar-bg);
+  width: 280px;
+  transition: all 0.2s ease-out;
+  box-shadow:
+    0 0 24px 0 #0000000f,
+    0 1px 0 0 #00000005;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 1003;
+  animation: slideIn 0.3s ease forwards;
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  &.closing {
+    animation: slideOut 0.3s ease forwards;
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+
+  .flex-container {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+    .close-icon__bg {
+      background-color: #384158;
+      border-radius: 50%;
+      color: #e9ecef;
+      height: 24px;
+      width: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #4a5568;
+      }
+    }
+
+    .side-bar__title {
+      color: var(--bs-heading-color);
+      margin: 0;
+      font-size: 1.25rem;
+    }
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid;
+    border-top: var(--bs-border-width) solid;
+    color: var(--bs-body-color);
+    margin: 1rem 0;
+    opacity: 0.25;
+  }
+
+  .radio-toolbar {
+    .mode {
+      color: var(--bs-body-color);
+      display: block;
+      margin-bottom: 0.5rem !important;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    label {
+      background-color: #dee2e6;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      padding: 5px 10px;
+      margin-right: 5px;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #cbd5e0;
+      }
+    }
+
+    input[type="radio"] {
+      opacity: 0;
+      position: fixed;
+      width: 0;
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: #7a6fbe;
+      border: none;
+      color: #fff;
+    }
+  }
+}

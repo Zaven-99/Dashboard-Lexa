@@ -1,0 +1,17 @@
+@use "../../styles/variables";
+header {
+  .top-bar {
+    background-color: var(--bs-header-bg);
+    box-shadow:
+      0 -3px 31px 0 #0000000d,
+      0 6px 20px 0 #00000005;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1002;
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+  }
+}
