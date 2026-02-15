@@ -46,7 +46,7 @@ export const useAuth = () => {
         reset();
       } else {
         setIsLoggedIn(false);
-        setError("Invalid username or password");
+        setError("Invalid e-mail or password");
       }
     } catch (err) {
       console.error("Login error:", err);

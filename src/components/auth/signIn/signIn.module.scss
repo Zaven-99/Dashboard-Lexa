@@ -21,9 +21,7 @@
         0 6px 20px 0 #00000005;
       border-radius: 5px;
       padding: 1.25rem 1.25rem;
-      // @media (max-width: 768px) {
-      //   width: auto;
-      // }
+
       .logo {
         width: 115px;
         justify-content: center;
@@ -43,6 +41,12 @@
         color: var(--bs-secondary-color);
         text-align: center;
         font-size: 13px;
+      }
+      .error {
+        font-size: 12px;
+        margin-top: 0.25rem;
+        width: 100%;
+        color: var(--bs-form-invalid-color);
       }
       .form-label {
         font-weight: 500;
